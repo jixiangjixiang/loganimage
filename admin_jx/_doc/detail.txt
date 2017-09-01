@@ -1,0 +1,8 @@
+
+先执行sql.sql
+修改jx/admin_jx/inc_dbconn.php中的数据库配置即可。
+
+后台：jx/admin_jx/adminlogin.html
+user:admin
+pass:admin888
+

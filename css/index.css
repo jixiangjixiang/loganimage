@@ -1,0 +1,80 @@
+*{margin:0px;border:0px;padding:0px;}a{ font-family: "futura-pt";text-decoration:none;}
+#header{
+	width:100%;
+	position:relative;
+	clear:both;
+	height:100px;
+	min-width:700px;
+}
+#header .header-logo{
+	float:left;
+	margin-left:75px;
+	margin-top:38px;
+}
+#header .header-logo a,#header .header-nav li a{
+	font-family: "futura-pt";
+    font-style: normal;
+    letter-spacing: 0;
+    text-transform: capitalize;
+}
+#header .header-logo a{
+	color: #000;
+    font-weight: 700;
+    font-size: 32px;
+}
+#header .header-nav{
+	margin-right:75px;
+	margin-top:53px;
+	float:right;
+}
+#header .header-nav li{
+	float:right;
+	width:80px;
+	margin-right:10px;
+	list-style-type:none;
+	text-align:right;
+}
+#header .header-nav li.about{
+	margin-right:0px;
+}
+#header .header-nav li a{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+	color: #999;
+}
+#header .header-nav li a:hover{
+	color: #666;
+}
+#header .header-nav li a.active{
+	color:#000
+}
+#footer{
+	width:100%;
+	margin-top:35px;
+	margin-bottom:40px;
+	float:right;
+	padding-right:100px;
+}
+#footer .contact p{
+	text-align:right;
+	font-size:14px;
+	color:#686666;
+	margin-top:7px;
+	font-family: "futura-pt";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.6em;
+	
+}
+#footer .contact p a{
+	color:#686666;
+	font-family: "futura-pt";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.6em;
+}

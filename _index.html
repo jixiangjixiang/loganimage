@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fashion</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" href="src/jquery.skidder.css">
+</head>
+<body>
+<div id="header" class="">
+	<div class="header-logo"><a href="javascript:void(0);">Fashion</a></div>
+	<div class="header-nav">
+		<ul>
+			<li class="about"><a href="">About</a></li>
+			<li><a href="">Beauty</a></li>
+			<li><a href="">Fashion</a></li>
+			<li><a class="active" href="">Fashion</a></li>
+		</ul>
+	</div>
+</div>
+<div class="slideshow" style="overflow: hidden">
+	  <div class="slide"><img src="./img/6.jpg"></div>
+	  <div class="slide"><img src="./img/7.jpg"></div>
+	  <div class="slide"><img src="./img/8.jpg"></div>
+	  <div class="slide"><img src="./img/9.jpg"></div>
+	  <div class="slide"><img src="./img/10.jpg"></div>
+	  <div class="slide"><img src="./img/11.jpg"></div>
+	  <div class="slide"><img src="./img/12.jpg"></div>
+	  <div class="slide"><img src="./img/13.jpg"></div>
+	  <div class="slide"><img src="./img/14.jpg"></div>
+	  <div class="slide"><img src="./img/15.jpg"></div>
+	  <div class="slide"><img src="./img/16.jpg"></div>
+</div>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/imagesloaded.js"></script>
+<script src="js/smartresize.js"></script>
+<script src="src/jquery.skidder.js"></script>
+<script type="text/javascript">
+	$('.slideshow').each( function() {
+		  var $slideshow = $(this);
+		  //宽
+		  if (window.innerWidth){
+			  winWidth = window.innerWidth;
+		  }else if((document.body) && (document.body.clientWidth)){
+			winWidth = document.body.clientWidth;
+		  }
+		  //高
+		  if (window.innerHeight){
+			winHeight = window.innerHeight;
+		  }else if ((document.body) && (document.body.clientHeight)){
+		  //winHeight = document.body.clientHeight;
+			winHeight = winWidth/2;
+		  }
+
+		  $slideshow.imagesLoaded( function() {
+			$slideshow.skidder({
+			  slideClass    : '.slide',
+			  animationType : 'css',
+			  scaleSlides   : true,
+			  maxWidth : winWidth,
+			  maxHeight: winHeight,
+			  paging        : true,
+			  autoPaging    : true,
+			  pagingWrapper : ".skidder-pager",
+			  pagingElement : ".skidder-pager-dot",
+			  swiping       : true,
+			  leftaligned   : false,
+			  cycle         : true,
+			  jumpback      : false,
+			  speed         : 400,
+			  autoplay      : false,
+			  autoplayResume: false,
+			  interval      : 4000,
+			  transition    : "slide",
+			  afterSliding  : function() {},
+			  afterInit     : function() {}
+			});
+		  });
+	});
+	$(window).smartresize(function(){
+		  $('.slideshow').skidder('resize');
+	});
+</script>
+<div id="footer">
+	<div class="contact">
+		<p>email: <a href="">xiang.beyond@gmail.com</a></p>
+		<p>phone: <a href="">18610088251</a></p>
+	</div>
+</div>
+</body>
+</html>
